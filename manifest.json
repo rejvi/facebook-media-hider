@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Facebook Image and Video Hider",
+  "version": "1.0.0",
+  "description": "A simple chrome extension to hide images and videos on Facebook",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_icon": {
+       "128": "images/logo.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "images/logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.facebook.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
