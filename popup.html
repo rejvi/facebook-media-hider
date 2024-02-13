@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,43 +10,49 @@
             width: 200px;
             padding: 10px;
             font-family: 'Arial', sans-serif;
+            text-align: center;
         }
 
-        h2 {
+        h5 {
             text-align: center;
-            color: #333;
+            color: #2851A3;
         }
 
         button {
-        display: block;
-        margin: 0 auto;
-        padding: 10px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 100%;
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
         }
 
         /* Button color based on the state */
         button.hide-media {
-        background-color: #f44336 ;
-        color: white;
+            background-color: #f44336;
+            color: white;
         }
 
         button.show-media {
-        background-color: #4CAF50;
-        color: white;
+            background-color: #4CAF50;
+            color: white;
         }
 
         button:hover {
-        opacity: 0.8;
+            opacity: 0.8;
         }
     </style>
 </head>
+
 <body>
-    <h2>Facebook Image and Video Hider</h2>
+    <h5> Facebook Image and Video Hider
+        <img style="width: 100%;" src="images/logo.png" alt="">
+    </h5>
+
 
     <button id="toggleButton"></button>
     <script src="popup.js"></script>
 </body>
+
 </html>

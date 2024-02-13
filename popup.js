@@ -6,11 +6,10 @@ let mediaHidden = true; // Initial state: media is hidden
 function toggleMediaVisibility() {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     mediaHidden = !mediaHidden; // Toggle the state
-    chrome.tabs.sendMessage(tabs[0].id, { action: 'toggleMediaVisibility', mediaHidden });
-
     // Update button text based on the new state
     const buttonText = mediaHidden ? 'Show Media' : 'Hide Media';
     const buttonClass = mediaHidden ? 'show-media' : 'hide-media';
+    chrome.tabs.sendMessage(tabs[0].id, { action: 'toggleMediaVisibility', mediaHidden });
     document.getElementById('toggleButton').innerText = buttonText;
     document.getElementById('toggleButton').className = buttonClass;
   });

@@ -4,16 +4,13 @@ if (window.location.hostname === "www.facebook.com") {
   isFacebookPage = true;
 }
 
-// Function to hide images and videos
+// Function to hide images and videos if it's not a Facebook page
 function hideImagesAndVideos() {
-  if (!isFacebookPage) {
-    return; 
+  if (isFacebookPage) {
+      const displayStyle = mediaHidden ? 'none' : 'block';
+      document.querySelectorAll('img').forEach(img => img.style.display = displayStyle);
+      document.querySelectorAll('video').forEach(video => video.style.display = displayStyle);
   }
-// Apply the visibility state
-  const displayStyle = mediaHidden ? 'none' : 'block';
-  document.querySelectorAll('img').forEach(img => img.style.display = displayStyle);
-  document.querySelectorAll('video').forEach(video => video.style.display = displayStyle);
-
 }
 
 hideImagesAndVideos();
